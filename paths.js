@@ -1,6 +1,6 @@
 var replace = require("replace");
 
-var assetPath = "/build/public"
+var assetPath = "/public"
 
 replace({
     regex: "<% assetPath %>",

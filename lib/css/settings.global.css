@@ -1,0 +1,4 @@
+/* Font Families */
+$sans-serif: "Karla", "Helvetica Neue", Helvetica, Sans-Serif; /* 400, 700 */
+$serif: "Crimson", "Garamond", Georgia, Serif; /* 400, 600, italic */
+$mono: "Fira Code", Monaco, Consolas, "Lucida Console", monospace; /* 400 */
