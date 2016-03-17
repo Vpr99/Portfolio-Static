@@ -4,7 +4,7 @@
         "../lib/css/generic.reeeset.css"
     ],
     "rules": {
-        "indentation": "tab",
-        "number-leading-zero": null
+        "indentation": 4,
+        "number-leading-zero": "always"
     }
 }

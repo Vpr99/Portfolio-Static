@@ -1,3 +1,3 @@
 module.exports = {
-    "use": ["precss", "postcss-import", "rucksack-css", "lost", "autoprefixer", "cssnano"],
+    "use": ["precss", "postcss-easings", "postcss-import", "rucksack-css", "lost", "autoprefixer", "cssnano"],
 };
