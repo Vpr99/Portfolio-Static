@@ -1,4 +1,11 @@
-/* Font Families */
+/* Typography */
 $sans-serif: "Karla", "Helvetica Neue", Helvetica, Sans-Serif; /* 400, 700 */
 $serif: "Crimson", "Garamond", Georgia, Serif; /* 400, 600, italic */
 $mono: "Fira Code", Monaco, Consolas, "Lucida Console", monospace; /* 400 */
+
+$base-font-size:    16px;
+$base-line-height:  24px;
+$base-spacing-unit: $base-line-height;
+
+/* Grid */
+@lost flexbox flex;

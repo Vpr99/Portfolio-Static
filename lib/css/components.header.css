@@ -1,5 +1,25 @@
 .Header {
+    align-items: center;
+    display: flex;
+    flex-flow: row nowrap;
+    height: 5rem;
+    justify-content: space-between;
+    lost-center: 1280px;
+
     &-logo {
-        font-family: $sans;
+    }
+}
+
+.Nav {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+
+    &-link {
+        display: block;
+        padding: 10px;
+        transition: all 0.3s ease-out-quint;
+
+        &:hover { transform: translate(0, -0.25rem); }
     }
 }

@@ -1,0 +1,9 @@
+.ProjectGrid {
+    @mixin ui-list;
+    lost-center: 960px;
+}
+
+.GridItem {
+    background: red;
+    lost-column: 1/2;
+}

@@ -46,6 +46,7 @@
     "path": "^0.12.7",
     "postcss": "^5.0.19",
     "postcss-cli": "^2.5.1",
+    "postcss-easings": "^0.3.0",
     "postcss-import": "^8.0.2",
     "precss": "^1.4.0",
     "replace": "^0.3.0",
