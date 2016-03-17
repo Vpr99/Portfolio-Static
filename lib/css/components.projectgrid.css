@@ -4,6 +4,49 @@
 }
 
 .GridItem {
-    background: red;
+    background: rgba(255,0,0,0.2);
     lost-column: 1/2;
+
+    &-link {
+        display: block;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    &-description {
+        display: none;
+    }
+}
+
+
+.Registration {
+    &-bg {
+        background: url('../images/Registration-BG.jpg');
+        background-size: cover;
+        padding-top: 61.35%;
+        transform: scale(1.2);
+        transition: all 0.3s ease-out-quint;
+        width: 100%;
+    }
+
+    &:hover &-bg {
+        transform: scale(1);
+    }
+
+    &-logo {
+        background: url('../images/Registration-Logo.svg') no-repeat center;
+        background-size: contain;
+        width: 200px;
+        height: 200px;
+        transition: all 0.3s ease-out-quint;
+    }
+
+    &:hover {
+        &-bg {
+            transform: scale(1);
+        }
+        &-logo {
+            transform: scale(1.2);
+        }
+    }
 }

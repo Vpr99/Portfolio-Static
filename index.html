@@ -5,7 +5,8 @@
     <title>TEST DOC</title>
     <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Karla:400,700/Fira+Mono:400/Crimson:400,600,400i,600i">
     <link rel="stylesheet" href="<% assetPath %>/css/main.css">
-    <script src="<% assetPath %>/js/main.js" async></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" defer></script>
+    <script src="<% assetPath %>/js/main.js" defer></script>
 </head>
 <body>
     <header class="Header">
@@ -19,7 +20,7 @@
     </header>
     <div class="Content">
         <ul class="ProjectGrid">
-            <li class="GridItem">
+            <!-- <li class="GridItem">
                 <a class="GridItem-link" href="#">
                     <div class="GridItem-description">
                         <h2 class="GridItem-title">Pro Referral</h2>
@@ -27,11 +28,12 @@
                     </div>
                     <img class="GridItem-photo" src="#" alt="Some Project" />
                 </a>
-            </li>
+            </li> -->
             <li class="GridItem GridItem--registration">
                 <a class="GridItem-link" href="#">
-                    <div class="GridItem-photo">
-                        <img src="#" alt="Some Project" />
+                    <div class="GridItem-photo Registration">
+                        <!-- <div class="Registration-logo"></div> -->
+                        <div class="Registration-bg"></div>
                     </div>
                     <div class="GridItem-description">
                         <h2 class="GridItem-title">Concept: College Registration</h2>
@@ -40,7 +42,7 @@
 
                 </a>
             </li>
-            <li class="GridItem">
+            <!-- <li class="GridItem">
                 <a class="GridItem-link" href="#">
                     <div class="GridItem-description">
                         <h2 class="GridItem-title">Macys Mobile App</h2>
@@ -57,7 +59,7 @@
                     </div>
                     <img class="GridItem-photo" src="#" alt="Some Project" />
                 </a>
-            </li>
+            </li> -->
         </ul>
     </div>
 </body>
