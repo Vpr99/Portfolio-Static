@@ -19,6 +19,7 @@ The Inverted Triangle:
 
 @import "settings.global.css";
 @import "settings.colors.css";
+@import "settings.animations.css";
 
 @import "tools.mixins.css";
 
@@ -29,3 +30,19 @@ The Inverted Triangle:
 
 @import "components.header.css";
 @import "components.projectgrid.css";
+
+
+.ExpandTestWrapper {
+    lost-center: $wide-container;
+}
+
+.ExpandImg {
+    lost-column: 1/6;
+    lost-move: 1/6;
+    transition: all 0.2s ease-out-circ;
+    img { width: 100%; }
+    &.isExpanded {
+        lost-column: 1;
+        lost-move: 0;
+    }
+}

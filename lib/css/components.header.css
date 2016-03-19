@@ -4,10 +4,7 @@
     flex-flow: row nowrap;
     height: 5rem;
     justify-content: space-between;
-    lost-center: 1280px;
-
-    &-logo {
-    }
+    lost-center: $wide-container;
 }
 
 .Nav {

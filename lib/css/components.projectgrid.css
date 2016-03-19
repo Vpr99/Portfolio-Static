@@ -1,11 +1,12 @@
 .ProjectGrid {
+
     @mixin ui-list;
-    lost-center: 960px;
+    lost-center: $wide-container;
 }
 
 .GridItem {
-    background: rgba(255,0,0,0.2);
-    lost-column: 1/2;
+    overflow: hidden;
+    position: relative;
 
     &-link {
         display: block;
@@ -13,40 +14,141 @@
         width: 100%;
     }
 
-    &-description {
-        display: none;
-    }
-}
-
-
-.Registration {
-    &-bg {
-        background: url('../images/Registration-BG.jpg');
-        background-size: cover;
-        padding-top: 61.35%;
-        transform: scale(1.2);
+    &-info {
+        background: rgba(#000, 0.8);
+        opacity: 0;
+        position: absolute auto auto 0 auto;
+        transform: translateY(100%);
         transition: all 0.3s ease-out-quint;
         width: 100%;
+        z-index: 2;
     }
 
-    &:hover &-bg {
+    &:hover &-info {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    &-title {
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        margin: 0.5rem 0.5rem 0 0.5rem;
+        text-transform: uppercase;
+    }
+
+    &-description {
+        color: #fff;
+        margin: 0 0.5rem 0.5rem 0.5rem;
+    }
+
+    &--proreferral { lost-column: 1/2; }
+    &--registration { lost-column: 1/2; }
+}
+
+/* Styles for the Pro Referral Case */
+
+.ProReferral {
+
+    &-bg {
+        background: url("../images/ProReferral-Thumb-BG.jpg");
+        background-size: cover;
+        padding-top: 61.35%;
+        position: relative;
+        width: 100%;
+        z-index: 1;
+    }
+
+    &-device {
+        background: url("../images/ProReferral-Thumb-Device.png");
+        background-size: cover;
+        position: absolute 50% 50%;
+        size: 218px 455px;
+        transform: translateX(-109px) translateY(-156px);
+        z-index: 2;
+    }
+
+    /* Clipping area for the iPhone Screen */
+
+    &-cardArea {
+        overflow: hidden;
+        position: absolute 105px 15px;
+        size: 188px 300px;
+    }
+
+    &-card {
+        position: absolute;
+        size: 117px 149px;
+
+        &--1 {
+            animation: In-PR-card-1 0.5s normal forwards ease-out;
+            background: url("../images/ProReferral-Thumb-Card-1.png");
+            transform: translateX(36px) translateY(24px);
+            z-index: 6;
+        }
+
+        &--2 {
+            animation: In-PR-card-2 0.5s normal forwards ease-out;
+            background: url("../images/ProReferral-Thumb-Card-2.png");
+            transform: translateX(55px) translateY(25px) scale(0.9);
+            z-index: 5;
+        }
+
+        &--3 {
+            animation: In-PR-card-3 0.5s normal forwards ease-out;
+            background: url("../images/ProReferral-Thumb-Card-3.png");
+            transform: translateX(72px) translateY(25px) scale(0.8);
+            z-index: 4;
+        }
+
+        &--4 {
+            animation: In-PR-card-4 0.5s normal forwards ease-out;
+            background: url("../images/ProReferral-Thumb-Card-4.png");
+            opacity: 0.8;
+            transform: translateX(55px) translateY(25px) scale(0.9);
+            z-index: 3;
+        }
+    }
+
+    &:hover &-card--1 { animation: Out-PR-card-1 0.7s normal forwards ease-out-quad; }
+    &:hover &-card--2 { animation: Out-PR-card-2 0.7s normal forwards ease-out-quad; }
+    &:hover &-card--3 { animation: Out-PR-card-3 0.7s normal forwards ease-out-quad; }
+    &:hover &-card--4 { animation: Out-PR-card-4 0.7s normal forwards ease-out-quad; }
+}
+
+/* Styles for the Registration Case */
+
+.Registration {
+
+    &-bg {
+        backface-visibility: hidden;
+        background: url("../images/Registration-BG.jpg");
+        background-size: cover;
+        padding-top: 61.35%;
+        perspective: 1000;
+        position: relative;
         transform: scale(1);
+        transition: all 0.3s ease-out-quint;
+        width: 100%;
+        z-index: 1;
     }
 
     &-logo {
-        background: url('../images/Registration-Logo.svg') no-repeat center;
+        background: url("../images/Registration-Logo.svg") no-repeat center;
         background-size: contain;
-        width: 200px;
-        height: 200px;
+        position: absolute 50% 50%;
+        size: 200px;
+        transform: translateX(-100px) translateY(-100px);
         transition: all 0.3s ease-out-quint;
+        z-index: 2;
+
     }
 
-    &:hover {
-        &-bg {
-            transform: scale(1);
-        }
-        &-logo {
-            transform: scale(1.2);
-        }
+    &:hover &-bg {
+        filter: blur(1px) grayscale(0.2);
+        transform: scale(1.1);
     }
+
+    &:hover &-logo { transform: translateX(-100px) translateY(-140px) scale(0.8); }
 }
