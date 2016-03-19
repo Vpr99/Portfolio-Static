@@ -1,5 +1,5 @@
 /* Typography */
-$sans-serif: "Karla", "Helvetica Neue", Helvetica, Sans-Serif; /* 400, 700 */
+$sans-serif: "Montserrat", "Helvetica Neue", Helvetica, Sans-Serif; /* 400, 500 */
 $serif: "Crimson", "Garamond", Georgia, Serif; /* 400, 600, italic */
 $mono: "Fira Code", Monaco, Consolas, "Lucida Console", monospace; /* 400 */
 

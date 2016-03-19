@@ -1,18 +1,40 @@
 .Header {
-    align-items: center;
+    align-items: flex-end;
+    background: rgba(#fff, 0.9);
     display: flex;
     flex-flow: row nowrap;
     height: 5rem;
     justify-content: space-between;
     lost-center: $wide-container;
+    position: fixed 0 0;
+    z-index: 999;
+
+    &-logo h1 {
+        animation: LogoGradient 30s ease infinite;
+        background: linear-gradient(270deg, #fd746c, #ff9068);
+        background-size: 400% 400%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 1.5rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        margin-bottom: 0.5rem;
+    }
 }
 
 .Nav {
+
+    @mixin ui-list;
     display: flex;
     justify-content: space-around;
-    list-style: none;
+    margin-bottom: 0;
 
     &-link {
+
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 0.875rem;
+        letter-spacing: 1px;
         display: block;
         padding: 10px;
         transition: all 0.3s ease-out-quint;

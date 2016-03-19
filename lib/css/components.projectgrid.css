@@ -2,6 +2,7 @@
 
     @mixin ui-list;
     lost-center: $wide-container;
+    margin-top: 7rem;
 }
 
 .GridItem {
@@ -31,20 +32,23 @@
 
     &-title {
         color: #fff;
-        font-size: 1rem;
-        font-weight: 700;
+        font-size: 0.875rem;
+        font-weight: 500;
         letter-spacing: 1px;
         margin: 0.5rem 0.5rem 0 0.5rem;
         text-transform: uppercase;
     }
 
     &-description {
-        color: #fff;
+        color: rgba(#fff, 0.8);
+        font-size: 0.875rem;
+        font-weight: 300;
         margin: 0 0.5rem 0.5rem 0.5rem;
     }
 
     &--proreferral { lost-column: 1/2; }
     &--registration { lost-column: 1/2; }
+    &--cfnapa { lost-column: 1/3; }
 }
 
 /* Styles for the Pro Referral Case */
@@ -151,4 +155,36 @@
     }
 
     &:hover &-logo { transform: translateX(-100px) translateY(-140px) scale(0.8); }
+}
+
+
+.CFN {
+
+    &-bg {
+        background: #000;
+        padding-top: 61.35%;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        z-index: 1;
+    }
+
+    &-scrollContainer {
+        transform: rotate(10deg) translateX(-340px);
+        position: absolute;
+        z-index: 2;
+    }
+    &-scroller {
+        background: url("../images/CFN-Thumb-BG.jpg");
+        background-size: cover;
+        filter: blur(1px) grayscale(0.5) brightness(0.5);
+        /*position: absolute;*/
+        size: 604px 3900px;
+        transition: all 160s linear;
+    }
+
+    &:hover &-scroller {
+        filter: blur(10px) grayscale(0.2);
+        transform: translateY(-90%);
+    }
 }
