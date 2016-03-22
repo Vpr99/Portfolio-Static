@@ -1,3 +1,20 @@
-@define-mixin ui-list {
-    list-style: none;
+@define-mixin project-thumbnail-bg {
+    padding-top: 61.35%;
+    position: relative;
+    width: 100%;
+    z-index: 1;
 }
+
+/* Media Query Generator */
+@define-mixin respond $min, $max {
+    @media (min-width: $min) and (max-width: $max) { @mixin-content; }
+}
+
+@define-mixin desktop {
+    @media (min-width: $desktop) {
+        @mixin-content;
+    }
+}
+
+/* Removes default styling for non-semantic lists */
+@define-mixin ui-list { list-style: none; }

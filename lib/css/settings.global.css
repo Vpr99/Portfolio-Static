@@ -10,7 +10,13 @@ $base-spacing-unit: $base-line-height;
 /* Grid */
 
 @lost flexbox flex;
-@lost gutter 20px;
+@lost gutter 24px;
 
 $wide-container: 1280px;
 $narrow-container: 960px;
+
+/* Media Queries */
+
+$small: 1024px;
+$medium: 1024px;
+$desktop: 1024px;
