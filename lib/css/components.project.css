@@ -1,0 +1,97 @@
+.Project {
+    position: relative;
+    /* Hero Section */
+    &-hero {
+        position: relative;
+        size: 100% 500px;
+        z-index: -2;
+
+        &--CFN {
+            background: url("../images/CFN-Case-HeaderBG.jpg") no-repeat center;
+            background-size: cover;
+        }
+
+        &--RegistrationBlurry {
+            background: url("../images/Registration-Case-HeaderBG-Blur.jpg") no-repeat center;
+            background-size: cover;
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            z-index: -1;
+        }
+
+        &--Registration {
+            background: url("../images/Registration-Case-HeaderBG-Sharp.jpg") no-repeat center;
+            background-size: cover;
+        }
+    }
+
+    &-logo {
+        background: url("../images/CFN-Thumb-Logo.svg") no-repeat center;
+        background-size: contain;
+        position: absolute 10% 50%;
+        size: 321px 59px;
+        transform: translateX(-50%);
+    }
+
+    &-mainPreview {
+        background: url("../images/CFN-Case-MainPreview.png") no-repeat center;
+        background-size: contain;
+        lost-center: $narrow-container;
+        margin-top: -280px;
+        margin-bottom: 3rem;
+        size: 960px 567px;
+
+        &--CFN {
+
+        }
+
+        &--Registration {
+
+        }
+    }
+
+    &-body {
+        lost-center: $wide-container;
+        font-family: $serif;
+        font-size: 1.25rem;
+    }
+
+    &-description {
+        color: #333;
+        display: inline-block;
+        font-size: 1.75rem;
+        lost-column: 1/2;
+        lost-move: 1/4;
+
+        &:after {
+            display: block;
+            content: "";
+            width: 20%;
+            margin: 2rem auto;
+            height: 3px;
+            background: #e3e3e3;
+        }
+    }
+}
+
+.PhotoBlock {
+    lost-column: 1;
+
+    img {
+        width: 100%;
+        vertical-align: bottom;
+    }
+
+    &-item {
+        margin-bottom: 1.5rem;
+    }
+
+    &-item--half {
+        float: left;
+        lost-column: 1/2;
+    }
+    &-item--full {
+        lost-column: 1;
+    }
+}

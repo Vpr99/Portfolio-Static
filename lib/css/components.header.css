@@ -1,24 +1,38 @@
 .Header {
-    align-items: flex-end;
     background: rgba(#fff, 0.9);
-    display: flex;
-    flex-flow: row nowrap;
     height: 5rem;
-    justify-content: space-between;
-    lost-center: $wide-container;
     position: fixed 0 0;
+    transition: all 0.3s ease-out-quint;
     z-index: 999;
 
+    &-container {
+        lost-center: $wide-container;
+        align-items: flex-end;
+        display: flex;
+        flex-flow: row nowrap;
+        height: 5rem;
+        justify-content: space-between;
+    }
+
     &-logo h1 {
-        animation: LogoGradient 30s ease infinite;
-        background: linear-gradient(270deg, #fd746c, #ff9068);
-        background-size: 400% 400%;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        color: #fd746c;
         font-size: 1.5rem;
         font-weight: 700;
         letter-spacing: 2px;
         margin-bottom: 0.5rem;
+        transition: all 0.3s ease-out-quint;
+    }
+
+    &.is-projectPage {
+        background: none;
+        h1 { color: #fff; }
+        .Nav-link { color: #fff; }
+    }
+
+    &.is-scrolled {
+        background: rgba(#fff, 0.9);
+        h1 { color: #fd746c; }
+        .Nav-link { color: $color-link; }
     }
 }
 

@@ -1,9 +1,3 @@
-@keyframes LogoGradient {
-    0% { background-position: 0% 100%; }
-    50% { background-position: 100% 0%; }
-    100% { background-position: 0% 100%; }
-}
-
 @keyframes In-PR-card-1 {
     0% { transform: translateX(-300%) translateY(16.5%) }
     90% { transform: translateX(31%) translateY(16.5%) }

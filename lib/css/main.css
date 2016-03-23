@@ -30,6 +30,7 @@ The Inverted Triangle:
 
 @import "components.header.css";
 @import "components.projectgrid.css";
+@import "components.project.css";
 
 
 .ExpandTestWrapper {
