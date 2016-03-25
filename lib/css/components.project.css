@@ -35,19 +35,22 @@
     }
 
     &-mainPreview {
-        background: url("../images/CFN-Case-MainPreview.png") no-repeat center;
-        background-size: contain;
+
         lost-center: $narrow-container;
-        margin-top: -280px;
         margin-bottom: 3rem;
-        size: 960px 567px;
 
         &--CFN {
-
+            background: url("../images/CFN-Case-MainPreview.png") no-repeat center;
+            background-size: contain;
+            margin-top: -280px;
+            size: 960px 567px;
         }
 
         &--Registration {
-
+            background: url("../images/Registration-Case-MainPreview.png") no-repeat center;
+            background-size: contain;
+            margin-top: -325px;
+            size: 960px 563px;
         }
     }
 
@@ -57,7 +60,7 @@
         font-size: 1.25rem;
     }
 
-    &-description {
+    &-summary {
         color: #333;
         display: inline-block;
         font-size: 1.75rem;
@@ -68,9 +71,18 @@
             display: block;
             content: "";
             width: 20%;
-            margin: 2rem auto;
+            margin: 4rem auto;
             height: 3px;
             background: #e3e3e3;
+        }
+    }
+
+    &-description {
+        lost-column: 2/3;
+        lost-move: 1/6;
+
+        p {
+            font-size: 1.375rem;
         }
     }
 }
@@ -83,15 +95,23 @@
         vertical-align: bottom;
     }
 
-    &-item {
-        margin-bottom: 1.5rem;
+    &-expandItem {
+        cursor: pointer;
+        lost-column: 1/2;
+        lost-move: 1/4;
+        transition: all 0.2s ease-out-circ;
+        img { width: 100%; }
+        &.isExpanded {
+            lost-column: 1;
+            lost-move: 0;
+        }
     }
+
+    &-item { margin-bottom: 1.5rem; }
 
     &-item--half {
         float: left;
         lost-column: 1/2;
     }
-    &-item--full {
-        lost-column: 1;
-    }
+    &-item--full { lost-column: 1; }
 }
