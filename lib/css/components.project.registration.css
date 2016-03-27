@@ -1,0 +1,30 @@
+.Project-hero--Registration {
+    position: absolute 0;
+    z-index: 0;
+
+    &::before {
+        background: url("../images/Registration-Case-HeaderBG-Sharp.jpg") no-repeat top center;
+        background-size: contain;
+    }
+}
+
+.Project-hero--RegistrationBlurry {
+    position: absolute 0;
+
+    &::before {
+        background: url("../images/Registration-Case-HeaderBG-Blur.jpg") no-repeat top center;
+        background-size: contain;
+    }
+}
+
+.RegistrationDashboard {
+    &-description { lost-column: 2/3 0; }
+}
+
+.RegistrationSearch {
+    &-description { lost-column: 2/3 0; }
+}
+
+.RegistrationDetail {
+    &-description { lost-column: 2/3 0; }
+}

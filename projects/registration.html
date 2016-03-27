@@ -20,43 +20,56 @@
     </header>
     <div class="Content">
         <div class="Project-heading">
-            <div class="Project-hero Project-hero--Registration">
+            <div class="Project-hero Registration-heroContainer">
+                <div class="Project-hero Project-hero--Registration"></div>
                 <div class="Project-hero Project-hero--RegistrationBlurry"></div>
             </div>
-            <div class="Project-mainPreview Project-mainPreview--Registration"></div>
+            <div class="Project-mainPreview Project-mainPreview--Registration">
+                <img src="<% assetPath %>/images/Registration-Case-MainPreview.png" alt="">
+            </div>
         </div>
         <div class="Project-body">
-            <blockquote class="Project-summary">
-                <p>Course planning is critically important for students, but registration tools often feel like they're stuck in 1995. In this concept, I reworked my college's tool to be more usable and powerful by providing some valuable context.</p>
-            </blockquote>
-
-            <div class="Project-description">
-                <h2>Dashboard</h2>
-                <p>Unlike Facebook or Instagram, where using the application is the end-goal, this tool is judged by how <em>little</em> time users have to spend to complete their tasks. Surfacing links for frequently used tools at the top of the page will reduce the amount of searching required to use common functions.</p>
+            <div class="Overview">
+                <blockquote class="Overview-summary">
+                    <p>Course planning is critically important for students, but registration tools often feel like they're stuck in 1995. In this concept, I reworked my college's tool to be more usable and powerful by providing some valuable context.</p>
+                </blockquote>
+                <div class="Overview-scope">
+                    <h3 class="Overview-title">Scope</h3>
+                    <p class="Overview-item">Research, Web</p>
+                    <h3 class="Overview-title">Tools</h3>
+                    <p class="Overview-item">Sketch, Photoshop</p>
+                </div>
             </div>
-            <div class="PhotoBlock">
-                <div class="PhotoBlock-expandItem">
+
+            <section class="Project-block RegistrationDashboard">
+                <h2 class="Project-block-title RegistrationDashboard-title">Dashboard</h2>
+                <div class="RegistrationDashboard-description">
+                    <p>Unlike Facebook or Instagram, where using the application is the end-goal, this tool is judged by how <em>little</em> time users have to spend completing tasks. Surfacing links for frequently used tools at the top of the page will reduce the amount of searching required to use common functions.</p>
+                </div>
+                <div class="RegistrationDashboard-mock">
                     <img src="<% assetPath %>/images/Registration-Dashboard.png" alt="">
                 </div>
-            </div>
-            <div class="Project-description">
-                <h2>Search</h2>
-                <p>Returning contextual and relevant search results allows students to make snap judgements and build their schedules more quickly: <em>"Do I need to take this course for my major?"</em> or <em>"Is the class full?"</em></p>
-            </div>
-            <div class="PhotoBlock">
-                <div class="PhotoBlock-expandItem">
+            </section>
+
+            <section class="Project-block RegistrationSearch">
+                <h2 class="Project-block-title RegistrationSearch-title">Search</h2>
+                <div class="RegistrationSearch-description">
+                    <p>Returning contextual and relevant search results allows students to make snap judgements and build their schedules more quickly: <em>"Do I need to take this course for my major?"</em> or <em>"Is the class full?"</em></p>
+                </div>
+                <div class="RegistrationSearch-mock">
                     <img src="<% assetPath %>/images/Registration-Search-Results.png" alt="">
                 </div>
-            </div>
-            <div class="Project-description">
-                <h2>Class Detail</h2>
-                <p>Eligibility for a class is the first deciding factor for students and should be shown accordingly. Next is often how well the class fits in the rest of their schedule. A week preview gives a holistic view of all saved classes, reducing the cognitive load necessary to mentally build a complete schedule.</p>
-            </div>
-            <div class="PhotoBlock">
-                <div class="PhotoBlock-expandItem">
+            </section>
+
+            <section class="Project-block RegistrationDetail">
+                <h2 class="Project-block-title RegistrationDetail-title">Class Detail Page</h2>
+                <div class="RegistrationDetail-description">
+                    <p>Eligibility for a class is the first deciding factor for students and should be shown accordingly. Next is often how well the class fits in the rest of their schedule. A week preview gives a holistic view of all saved classes, reducing the cognitive load necessary to mentally build their schedule.</p>
+                </div>
+                <div class="RegistrationDetail-mock">
                     <img src="<% assetPath %>/images/Registration-Detail.png" alt="">
                 </div>
-            </div>
+            </section>
         </div>
     </div>
 </body>

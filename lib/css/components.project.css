@@ -1,35 +1,22 @@
 .Project {
     position: relative;
 
-
     /* Hero Section */
+
     &-hero {
-        position: relative;
         overflow: hidden;
-        size: 100% 500px;
+        position: relative;
+        size: 100% 31vr;
         z-index: -2;
 
-        /* Fix for bg-attachment: fixed repaint performance: http://goo.gl/PoEzgz */
+        /* Fix for bg-attachment: repaint performance: http://goo.gl/PoEzgz */
+
         &::before {
             content: "";
             position: fixed 0 0;
             size: 100%;
             will-change: transform;
             z-index: -1;
-        }
-
-        &--RegistrationBlurry {
-            background: url("../images/Registration-Case-HeaderBG-Blur.jpg") no-repeat center;
-            background-size: cover;
-            opacity: 0;
-            position: absolute;
-            top: 0;
-            z-index: -1;
-        }
-
-        &--Registration {
-            background: url("../images/Registration-Case-HeaderBG-Sharp.jpg") no-repeat center;
-            background-size: cover;
         }
     }
 
@@ -49,11 +36,11 @@
     &-block {
         margin-bottom: 10vr;
 
-        &--hug { margin-bottom: 1.5vr;}
+        &--hug { margin-bottom: 1.5vr; }
         &-title { lost-column: 1/1; }
 
         p {
-            font: 1.414rem/2.5vr $serif;
+            font: $ts1/2.5vr $serif;
             margin-bottom: 2vr;
         }
 
@@ -69,13 +56,13 @@
 }
 
 .Overview {
-    margin-top: 4vr;
     lost-center: $wide-container;
+    margin-top: 4vr;
 
     &-summary {
         color: #333;
         display: inline-block;
-        font: 2rem/3vr $serif;
+        font: $ts2/3vr $serif;
         lost-column: 3/5 2;
         margin: 0;
     }
@@ -83,8 +70,8 @@
     &-scope { lost-column: 2/5 2; }
 
     &-title {
-        display: block;
         border-bottom: 1px solid #e3e3e3;
+        display: block;
         margin-top: 1vr;
     }
 
@@ -93,43 +80,11 @@
         margin-bottom: 2.25vr;
     }
 
-    &:after {
-        display: block;
-        content: "";
-        width: 10%;
-        margin: 4vr auto;
-        height: 4px;
+    &::after {
         background: #e3e3e3;
+        content: "";
+        display: block;
+        margin: 4vr auto;
+        size: 10% 0.25vr;
     }
-}
-
-
-
-.PhotoBlock {
-    lost-column: 1;
-
-    img {
-        width: 100%;
-        vertical-align: bottom;
-    }
-
-    &-expandItem {
-        cursor: pointer;
-        lost-column: 1/2;
-        lost-move: 1/4;
-        transition: all 0.2s ease-out-circ;
-        img { width: 100%; }
-        &.isExpanded {
-            lost-column: 1;
-            lost-move: 0;
-        }
-    }
-
-    &-item { margin-bottom: 1.5rem; }
-
-    &-item--half {
-        float: left;
-        lost-column: 1/2;
-    }
-    &-item--full { lost-column: 1; }
 }
