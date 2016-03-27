@@ -1,6 +1,6 @@
 @keyframes In-PR-card-1 {
-    0% { transform: translateX(-300%) translateY(16.5%) }
-    90% { transform: translateX(31%) translateY(16.5%) }
+    0% { transform: translateX(-300%) translateY(16.5%); }
+    90% { transform: translateX(31%) translateY(16.5%); }
     100% { transform: translateX(30.7%) translateY(16.6%); }
 }
 

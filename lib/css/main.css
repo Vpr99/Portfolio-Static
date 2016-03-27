@@ -7,29 +7,31 @@
  /__________\  | Tools
 /____________\ | Settings
 
-The Inverted Triangle:
-1. Settings: Global project settings & configurations
-2. Tools: Globally available tools, helpers & mixins
-3. Generic: Ground Zero Styles - Low Specificity & far-reaching
-4. Elements: Unclassed HTML Elements & Type Selectors
-5. Ojbects: Unstyled Design Patterns
-6. Components: Designed & styled pieces of UI
-7. Trumps: Overrides, Helpers & Utilities - 1 DOM Element at a time
+The Inverted Triangle
 */
 
+/* Settings: Global project settings & configurations */
 @import "settings.global.css";
 @import "settings.colors.css";
 @import "settings.animations.css";
 
+/* Tools: Globally available tools, helpers & mixins */
 @import "tools.mixins.css";
 
+/* Generic: Ground Zero Styles - Low Specificity & far-reaching */
 @import "generic.reeeset.css";
 
+/* Elements: Unclassed HTML Elements & Type Selectors */
 @import "elements.page.css";
 @import "elements.headings.css";
 @import "elements.links.css";
 
+/* Ojbects: Unstyled Design Patterns */
+
+/* Components: Designed & styled pieces of UI */
 @import "components.header.css";
 @import "components.projectgrid.css";
 @import "components.project.css";
 @import "components.project.macys.css";
+
+/* Trumps: Overrides, Helpers & Utilities - 1 DOM Element at a time */

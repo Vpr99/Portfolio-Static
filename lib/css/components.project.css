@@ -57,6 +57,8 @@
     &-block {
         margin-bottom: 10vr;
 
+        &-title { lost-column: 1/1; }
+
         p {
             font: 1.414rem/2.5vr $serif;
             margin-bottom: 2vr;
