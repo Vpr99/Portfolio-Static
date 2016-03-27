@@ -1,0 +1,114 @@
+
+.MacysStrategy {
+    &-title { lost-column: 1/1; }
+    &-description { lost-column: 2/3 0; }
+
+    &-quote {
+        color: #696969;
+        font: italic 500 2rem/3vr $serif;
+        lost-column: 4/5 0;
+        margin-bottom: 2vr;
+
+        strong { font-weight: 600; }
+        q { quotes: "\201C" "\201D" "\2018" "\2019"; }
+    }
+}
+
+.MacysEpics {
+    &-title { lost-column: 1/1; }
+    &-description { lost-column: 2/3 0; }
+    &-list { lost-center: $wide-container; }
+    &-epic {
+        lost-column: 1/4;
+
+        li { margin-bottom: 1vr; }
+
+        &Heading {
+            list-style: none;
+            border-bottom: 1px solid #e3e3e3;
+            h3 { margin-bottom: 0; }
+        }
+
+        li:not(.MacysEpics-epicHeading) {
+            margin-left: 1.5vr;
+            font-weight: 300;
+            line-height: 1.5vr;
+        }
+    }
+    &-flow {
+        lost-column: 2/3;
+        lost-move: 1/6;
+    }
+}
+
+.MacysPrototyping {
+    background: url("../images/Macys-Case-Prototyping.jpg") no-repeat center;
+    background-size: cover;
+    display: block;
+    size: 100% 25vr;
+
+    &-description {
+        lost-center: $wide-container;
+
+        h2 {
+            color: #fff;
+            lost-column: 1/1;
+            margin-top: 5vr;
+        }
+        p {
+            color: #fff;
+            lost-column: 1/2;
+        }
+    }
+}
+
+.MacysDiscovery {
+    &-title { lost-column: 1/1; }
+    &-description { lost-column: 2/3 0; }
+    &-list { lost-center: $wide-container; }
+    &-mock { lost-column: 1/4; }
+
+    figcaption { margin: 0 1vr 1vr 1vr; }
+
+    h3 {
+        border-bottom: 1px solid #e3e3e3;
+        display: block;
+        margin-bottom: 0.5vr;
+    }
+}
+
+.MacysAssistance {
+    background: #485563;
+    background: linear-gradient(to left, #485563 , #29323c);
+    padding: 4vr;
+    &-container { lost-center: $wide-container; }
+    &-title {
+        color: #fff;
+        lost-column: 1/1;
+    }
+    &-description {
+        color: rgba(#fff, 0.9);
+        lost-column: 1/2 2;
+    }
+    &-mock { lost-column: 1/2 2; }
+}
+
+.MacysMapping {
+    &-title { lost-column: 1/1; }
+    &-deviceMock {
+        lost-column: 1/4 3;
+        lost-move: 1/12;
+    }
+    &-description { lost-column: 2/3 3; }
+}
+
+
+.MacysRewards {
+    &-title {
+        lost-column: 1/1;
+    }
+    &-description {
+        lost-column: 1/2 3;
+    }
+    &-mock { lost-column: 1/4 3; }
+}

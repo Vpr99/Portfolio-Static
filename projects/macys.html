@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Macy's.com // Eric Skram</title>
+    <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Montserrat:300,500,700/Fira+Mono:400/Crimson:400,600,400i,600i">
+    <link rel="stylesheet" href="<% assetPath %>/css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" defer></script>
+    <script src="<% assetPath %>/js/main.js" defer></script>
+</head>
+<body>
+    <header class="Header is-projectPage">
+        <section class="Header-container">
+            <a class="Header-logo" href="/"><h1 class="Header-name">Eric Skram</h1></a>
+            <ul class="Nav">
+                <li class="Nav-item"><a class="Nav-link" href="/">Work</a></li>
+                <!-- <li class="Nav-item"><a class="Nav-link" href="#">Blog</a></li> -->
+            </ul>
+        </section>
+    </header>
+    <div class="Content">
+        <div class="Project-heading">
+            <div class="Project-hero Project-hero--Macys"></div>
+            <div class="Project-mainPreview Project-mainPreview--Macys"></div>
+        </div>
+        <div class="Project-body">
+            <div class="Overview">
+                <blockquote class="Overview-summary">
+                    <p>The Treasure Hunt is an concept designed to capitalize on Macy's greatest advantage over other online retailers: its brick-and-mortar stores. It also improves the in-store experience by helping customers easily find products.</p>
+                </blockquote>
+                <div class="Overview-scope">
+                    <h3 class="Overview-title">Scope</h3>
+                    <p class="Overview-item">iOS app</p>
+                    <h3 class="Overview-title">Tools</h3>
+                    <p class="Overview-item">Paper Prototypes, Sketch, Photoshop</p>
+                </div>
+            </div>
+            <section class="Project-block MacysStrategy">
+                <h2 class="MacysStrategy-title">Strategy</h2>
+                <div class="MacysStrategy-description">
+                    <p>We narrowed our high-level target consumer from &lsquo;millennials&rsquo; to female iOS users within that age group. iOS was chosen since it accounts for the majority of mobile traffic (64%) and revenue (80%) on Macy's.com. We pulled qualitative data from Macy's survey responses that matched our consumer and used this as the basis for our need-finding. We found some commonalities in their responses:</p>
+                    <blockquote class="MacysStrategy-quote">
+                        <q><strong>I usually know what I want, but not where to find it</strong> and if no-one is there to help me I will go to another store.</q>
+                    </blockquote>
+                    <blockquote class="MacysStrategy-quote">
+                        <q>It's <strong>hard to browse through categories</strong> on my phone and see what products look like.</q>
+                    </blockquote>
+                    <blockquote class="MacysStrategy-quote">
+                        <q>I feel like I'm <strong>not rewarded for my loyalty</strong> to Macy's.</q>
+                    </blockquote>
+                </div>
+            </section>
+            <section class="Project-block MacysEpics">
+                <h2 class="MacysEpics-title">Epics &amp; User Flow</h2>
+                <div class="MacysEpics-description">
+                    <p>We broke these challenges down into epics and came up with a rough feature list for each. The epics also made good logical separators when designing the user flow. </p>
+                </div>
+                <div class="MacysEpics-list">
+                    <ul class="MacysEpics-epic">
+                        <li class="MacysEpics-epicHeading"><h3>Discover Products</h3></li>
+                        <li>Select relevant categories</li>
+                        <li>Like / Dislike suggested items</li>
+                        <li>Add items to wishlist</li>
+                        <li>Share on social media</li>
+                    </ul>
+                    <ul class="MacysEpics-epic">
+                        <li class="MacysEpics-epicHeading"><h3>Find Products In-Store</h3></li>
+                        <li>See products available in-store</li>
+                        <li>Locate individual products</li>
+                        <li>Locate all wishlist items</li>
+                        <li>See nearby product recommendations</li>
+                    </ul>
+                    <ul class="MacysEpics-epic">
+                        <li class="MacysEpics-epicHeading"><h3>Get Assistance</h3></li>
+                        <li>Notify nearest salesperson</li>
+                        <li>Get resources to problem-solve independently</li>
+                    </ul>
+                    <ul class="MacysEpics-epic">
+                        <li class="MacysEpics-epicHeading"><h3>Earn Rewards</h3></li>
+                        <li>Be rewarded for using app features</li>
+                        <li>Spend points on items/experiences</li>
+                    </ul>
+                </div>
+                <div class="MacysEpics-flow">
+                    <img src="<% assetPath %>/images/Macys-Case-TaskFlow.png" alt="">
+                </div>
+            </section>
+            <section class="Project-block Project-block--fw MacysPrototyping">
+                <div class="MacysPrototyping-description">
+                    <h2 class="MacysPrototyping-title">Wireframing &amp; Prototyping</h2>
+                    <p>To promote rapid iteration, the first set of wires were done on a whiteboard. After narrowing down our options, I made paper prototypes to begin getting a feel for the interactions. Sticky notes proved really useful for showing stateful components.</p>
+                </div>
+            </section>
+            <section class="Project-block MacysDiscovery">
+                <h2 class="MacysDiscovery-title">Discover Products</h2>
+                <div class="MacysDiscovery-description">
+                    <p>To ease product discovery on mobile devices, we needed to rethink the traditional product grid. Using smart recommendations paired to a Tinder style gesture-controlled interface, we can show larger previews while still delivering relevant results. All the page's functionality can be accessed through swiping in any direction.</p>
+                </div>
+                <div class="MacysDiscovery-list">
+                    <figure class="MacysDiscovery-mock">
+                        <figcaption>
+                            <h3>Like / Dislike</h3>
+                            <span>Swipe left or right to like / dislike the current product.</span>
+                        </figcaption>
+                        <img src="<% assetPath %>/images/Macys-Case-Discovery1.png" alt="">
+                    </figure>
+                    <figure class="MacysDiscovery-mock">
+                        <figcaption>
+                            <h3>Share</h3>
+                            <span>Swipe up to share the product on social media.</span>
+                        </figcaption>
+                        <img src="<% assetPath %>/images/Macys-Case-Discovery2.png" alt="">
+                    </figure>
+                    <figure class="MacysDiscovery-mock">
+                        <figcaption>
+                            <h3>Save</h3>
+                            <span>Swipe down to save the product to your wishlist.</span>
+                        </figcaption>
+                        <img src="<% assetPath %>/images/Macys-Case-Discovery3.png" alt="">
+                    </figure>
+                    <figure class="MacysDiscovery-mock">
+                        <figcaption>
+                            <h3>More Info</h3>
+                            <span>Tap to get additional info and quick actions.</span>
+                        </figcaption>
+                        <img src="<% assetPath %>/images/Macys-Case-Discovery4.png" alt="">
+                    </figure>
+                </div>
+            </section>
+            <section class="Project-block Project-block--fw MacysAssistance">
+                <div class="MacysAssistance-container">
+                    <div class="MacysAssistance-description">
+                        <h2 class="MacysAssistance-title">Get Assistance</h2>
+                        <p>The majority of negative customer feedback gathered by Macy's revolves around customers not receiving help promptly or not being able to find an associate. We included an &lsquo;assist me&rsquo; feature in the app to combat this. A customer can notify an associate of what they need, or just call directly. </p>
+                    </div>
+                    <div class="MacysAssistance-mock">
+                        <img src="<% assetPath %>/images/Macys-Case-Assistance.png" alt="">
+                    </div>
+                </div>
+            </section>
+            <section class="Project-block MacysMapping">
+                <h2 class="MacysMapping-title">Finding Products in Store</h2>
+                <div class="MacysMapping-description">
+                    <p>A major challenge with department store shopping is finding specific items. Using Bluetooth LE beacons, products can be mapped to individual racks and marked for easy discovery. This, in tandem with RFID tags attached to each item, could provide real-time inventory tracking.</p>
+                    <img src="<% assetPath %>/images/Macys-Case-MapMock.jpg" alt="">
+                </div>
+                <div class="MacysMapping-deviceMock">
+                    <img src="<% assetPath %>/images/Macys-Case-MapPhone.png" alt="">
+                </div>
+            </section>
+            <section class="Project-block Project-block MacysRewards">
+
+                <div class="MacysRewards-description">
+                    <h2 class="MacysRewards-title">Earn Rewards</h2>
+                    <p>The wishlist feature on Macy's.com converts very well, but is underutilized and is even supressed on some platforms. Our idea would be very effective working in tandem with the wishlist and could be used to promote it to a broader audience. We introduced a more robust rewards system for items purchased from the wishlist, using both discounts and experiential prizes.</p>
+                </div>
+                <div class="MacysRewards-mock">
+                    <img src="<% assetPath %>/images/Macys-Case-Wishlist.png" alt="">
+                </div>
+                <div class="MacysRewards-mock">
+                    <img src="<% assetPath %>/images/Macys-Case-WishlistRewards.png" alt="">
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>

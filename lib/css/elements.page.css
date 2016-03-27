@@ -1,10 +1,12 @@
 html {
-    font-family: $sans-serif;
-    font-feature-settings: "kern", "liga";
-    font-size: ($base-font-size / 16px) * 1rem;
-    line-height: $base-line-height / $base-font-size;
 }
 
 body {
+    font: 16px/1 $sans-serif;
+    font-feature-settings: "kern", "liga";
     /*lost-utility: edit;*/
+}
+
+figcaption {
+    font: 300 16px/1 $sans-serif;
 }

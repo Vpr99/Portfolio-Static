@@ -26,24 +26,10 @@ The Inverted Triangle:
 @import "generic.reeeset.css";
 
 @import "elements.page.css";
+@import "elements.headings.css";
 @import "elements.links.css";
 
 @import "components.header.css";
 @import "components.projectgrid.css";
 @import "components.project.css";
-
-
-.ExpandTestWrapper {
-    lost-center: $wide-container;
-}
-
-.ExpandImg {
-    lost-column: 1/6;
-    lost-move: 1/6;
-    transition: all 0.2s ease-out-circ;
-    img { width: 100%; }
-    &.isExpanded {
-        lost-column: 1;
-        lost-move: 0;
-    }
-}
+@import "components.project.macys.css";

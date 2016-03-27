@@ -30,7 +30,8 @@
     }
 
     &.is-scrolled {
-        background: rgba(#fff, 0.9);
+        background: #fff;
+        border-bottom: 1px solid #e3e3e3;
         h1 { color: #fd746c; }
         .Nav-link { color: $color-link; }
     }
