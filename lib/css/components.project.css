@@ -5,6 +5,7 @@
     /* Hero Section */
     &-hero {
         position: relative;
+        overflow: hidden;
         size: 100% 500px;
         z-index: -2;
 
@@ -27,9 +28,19 @@
             background-size: cover;
         }
 
-        &--Macys {
-            background: url("../images/Macys-BG.jpg") no-repeat center;
-            background-size: cover;
+        /* Fix for bg-attachment: fixed repaint performance: http://goo.gl/PoEzgz */
+        &--Macys::before {
+            content: "";
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: #fff;
+            background: url("../images/Macys-BG.jpg") no-repeat top center;
+            background-size: contain;
+            will-change: transform;
+            z-index: -1;
         }
     }
 

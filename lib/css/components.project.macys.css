@@ -5,7 +5,7 @@
 
     &-quote {
         color: #696969;
-        font: italic 500 2rem/3vr $serif;
+        font: italic 500 $ts2/3vr $serif;
         lost-column: 4/5 0;
         margin-bottom: 2vr;
 

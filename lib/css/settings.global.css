@@ -7,6 +7,12 @@ $base-font-size: 16px;
 $base-line-height: 24px;
 $base-spacing-unit: $base-line-height;
 
+$ts3: 2.827rem;
+$ts2: 2rem;
+$ts1: 1.414rem;
+$ts0: 1rem;
+$ts-1: 0.707rem;
+
 /* Grid */
 
 @lost flexbox flex;
