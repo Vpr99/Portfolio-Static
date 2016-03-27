@@ -1,0 +1,6 @@
+.Project-hero--CFN::before {
+    background: url("../images/CFN-Case-HeaderBG.jpg") no-repeat top center;
+    background-size: contain;
+}
+
+.CFNSubpages-item { lost-column: 1/2 2; }

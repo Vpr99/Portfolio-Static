@@ -9,9 +9,13 @@
         size: 100% 500px;
         z-index: -2;
 
-        &--CFN {
-            background: url("../images/CFN-Case-HeaderBG.jpg") no-repeat center;
-            background-size: cover;
+        /* Fix for bg-attachment: fixed repaint performance: http://goo.gl/PoEzgz */
+        &::before {
+            content: "";
+            position: fixed 0 0;
+            size: 100%;
+            will-change: transform;
+            z-index: -1;
         }
 
         &--RegistrationBlurry {
@@ -27,36 +31,25 @@
             background: url("../images/Registration-Case-HeaderBG-Sharp.jpg") no-repeat center;
             background-size: cover;
         }
-
-        /* Fix for bg-attachment: fixed repaint performance: http://goo.gl/PoEzgz */
-        &--Macys::before {
-            content: "";
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            background-color: #fff;
-            background: url("../images/Macys-BG.jpg") no-repeat top center;
-            background-size: contain;
-            will-change: transform;
-            z-index: -1;
-        }
     }
+
+    &-mainPreview {
+        lost-center: $narrow-container;
+        margin-top: -20vr;
+    }
+
+    &-logoContainer { lost-center: $narrow-container; }
 
     &-logo {
-        background: url("../images/CFN-Thumb-Logo.svg") no-repeat center;
-        background-size: contain;
-        position: absolute 10% 50%;
-        size: 321px 59px;
-        transform: translateX(-50%);
+        lost-column: 1/3;
+        lost-move: 1/3;
+        margin-top: 4vr;
     }
-
-
 
     &-block {
         margin-bottom: 10vr;
 
+        &--hug { margin-bottom: 1.5vr;}
         &-title { lost-column: 1/1; }
 
         p {

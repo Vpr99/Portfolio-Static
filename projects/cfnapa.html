@@ -21,35 +21,38 @@
     <div class="Content">
         <div class="Project-heading">
             <div class="Project-hero Project-hero--CFN">
-                <div class="Project-logo Project-logo--CFN"></div>
+                <div class="Project-logoContainer">
+                    <img class="Project-logo" src="<% assetPath %>/images/CFN-Thumb-Logo.svg" alt="">
+                </div>
             </div>
-            <div class="Project-mainPreview Project-mainPreview--CFN"></div>
+            <div class="Project-mainPreview Project-mainPreview--CFN">
+                <img src="<% assetPath %>/images/CFN-Case-MainPreview.png" alt="">
+            </div>
         </div>
         <div class="Project-body">
-            <blockquote class="Project-summary">
-                <p>CF Napa is one of California's premier wine branding agencies. They approached me to convert their Flash site to a more scalable platform. The new site was developed to be faster and more maintainable. It uses a Wordpress backend and DB coupled to a Timber/Twig frontend.</p>
-            </blockquote>
-
-            <div class="PhotoBlock">
-                <div class="PhotoBlock-item PhotoBlock-item--full">
-                    <img src="<% assetPath %>/images/CFN-Case-Home.jpg" alt="">
+            <div class="Overview">
+                <blockquote class="Overview-summary">
+                    <p>CF Napa is one of California's premier wine branding agencies. They approached me to convert their Flash site to a more scalable platform. The new site was developed to be faster and more maintainable. It uses a Wordpress backend and DB coupled to a Timber/Twig frontend.</p>
+                </blockquote>
+                <div class="Overview-scope">
+                    <h3 class="Overview-title">Scope</h3>
+                    <p class="Overview-item">Responsive Web</p>
+                    <h3 class="Overview-title">Tools</h3>
+                    <p class="Overview-item">Wordpress, Timber, Sass, Javscript</p>
                 </div>
-                <div class="PhotoBlock-item PhotoBlock-item--half">
+            </div>
+            <section class="Project-block Project-block--hug CFNHome">
+                <img src="<% assetPath %>/images/CFN-Case-Home.jpg" alt="">
+            </section>
+            <section class="Project-block CFNSubpages">
+                <div class="CFNSubpages-item">
                     <img src="<% assetPath %>/images/CFN-Case-CaseStudy.jpg" alt="">
                 </div>
-                <div class="PhotoBlock-item PhotoBlock-item--half">
+                <div class="CFNSubpages-item">
                     <img src="<% assetPath %>/images/CFN-Case-Detail.jpg" alt="">
                 </div>
-            </div>
+            </section>
         </div>
-        <!-- <div class="ExpandTestWrapper">
-            <div data-row="Search-Results" class="ExpandImg">
-                <img src="<% assetPath %>/images/Registration-Search-Results.jpg" alt="">
-            </div>
-            <div data-row="Search-Results" class="ExpandOtherShit">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis quibusdam non dolorem sit mollitia est. Amet quo inventore repellendus porro illum est cum vel a non quis, pariatur perferendis enim.</p>
-            </div>
-        </div> -->
     </div>
 </body>
 </html>

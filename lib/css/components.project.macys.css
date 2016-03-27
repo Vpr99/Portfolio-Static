@@ -1,3 +1,7 @@
+.Project-hero--Macys::before {
+    background: #fff url("../images/Macys-BG.jpg") no-repeat top center;
+    background-size: contain;
+}
 
 .MacysStrategy {
     &-description { lost-column: 2/3 0; }
