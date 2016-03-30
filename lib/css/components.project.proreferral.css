@@ -1,0 +1,144 @@
+.Header--ProReferral.is-scrolled h1 { color: $pr-orange; }
+
+.Project-hero--ProReferral::before {
+    background: #fff url("../images/PR-Case-BG.jpg") no-repeat top center;
+    background-size: contain;
+}
+
+.Overview-siteLink--ProReferral {
+    border: 1px solid rgba($pr-orange, 0.5);
+    color: $pr-orange;
+    transition: all 0.3s ease-out-quint;
+
+    &:hover {
+        border: 1px solid $pr-orange;
+        color: $pr-orange;
+    }
+
+    &::after {
+        background: #fff url("../images/ProReferral-CTA-Arrow.svg") no-repeat top center;
+        background-size: contain;
+    }
+}
+
+/* Pro Section Header */
+
+.PRPro {
+    background: url("../images/PR-Case-Show.jpg") no-repeat center;
+    background-size: cover;
+    display: block;
+    size: 100% 50vr;
+
+    &-container { lost-center: $wide-container; }
+
+    &-title {
+        color: #222;
+        font-size: $ts4;
+        line-height: 4vr;
+        lost-column: 1/3 1;
+
+        &--orange {
+            color: $pr-orange;
+            font-weight: 700;
+        }
+    }
+
+    &-description { lost-column: 1/2 0; }
+}
+
+/* Pro App Section Header */
+
+
+.PRProApp {
+    background: url("../images/ProReferral-Case-ProApp.jpg") no-repeat center;
+    background-size: cover;
+    size: 100% 25vr;
+
+    &-container {
+        align-items: center;
+        height: 100%;
+        lost-center: $wide-container;
+    }
+
+    &-logoMark { lost-column: 1/12 2; }
+
+    &-title {
+        color: #fff;
+        font-size: $ts4;
+        lost-column: 10/12 2;
+    }
+}
+
+.PRProDashboard {
+    align-items: flex-end;
+
+    &-title {
+        lost-move: 1/7;
+    }
+
+    &-description {
+        lost-column: 2/3 0;
+        lost-move: 1/7;
+    }
+    &-web {
+        align-items: flex-start;
+        lost-column: 3/4;
+        lost-move: 1/12;
+    }
+    &-app {
+        lost-column: 1/5;
+        lost-move: -1/12;
+        transform:translateY(4vr);
+    }
+    &-list {
+        align-items: center;
+        lost-center: $wide-container;
+    }
+    &-mock { lost-column: 1/4 5; }
+    &-spacer {
+        display: flex;
+        justify-content: center;
+        lost-column: 1/8 5;
+    }
+    &-arrow {
+        size: 15%;
+    }
+}
+
+.PRProAppTriage {
+    &-description { lost-column: 2/3 0; }
+    &-list { lost-center: $wide-container; }
+    &-mock {
+        lost-column: 1/4;
+
+        &--followUp { lost-move: 1/8; }
+        &--pass { lost-move: 1/4; }
+
+    }
+}
+
+
+.PRProAppMessaging {
+    &-description { lost-column: 2/5 2; }
+    &-mock { lost-column: 3/5 2; }
+}
+
+
+.PRProAppStyleGuide {
+    &-description {
+        lost-move: 1/6;
+        lost-column: 2/3 0;
+    }
+
+    &-mock {
+        lost-column: 3/4;
+        lost-move: 1/8;
+        position: relative;
+
+    }
+    &-screen {
+        position: absolute;
+        z-index: 1;
+        &.isActive { z-index: 3; }
+    }
+}

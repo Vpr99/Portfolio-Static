@@ -36,7 +36,8 @@
     &-block {
         margin-bottom: 10vr;
 
-        &--hug { margin-bottom: 1.5vr; }
+        &--hug { margin-bottom: $gutter; }
+        &--superHug { margin-bottom: 0; }
         &-title { lost-column: 1/1; }
 
         p {
@@ -86,5 +87,25 @@
         display: block;
         margin: 4vr auto;
         size: 10% 0.25vr;
+    }
+
+    &-siteLink {
+        border: 1px solid #333;
+        border-radius: 4px;
+        display: inline-block;
+        margin: 2vr 0;
+        padding: 1vr 4vr 1vr 2vr;
+        position: relative;
+
+        &::after {
+            content: "";
+            display: block;
+            position: absolute 50% 0 auto auto;
+            size: 1vr;
+            transform: translateX(-2vr) translateY(-0.5vr);
+            transition: all 0.3s ease-out-quint;
+        }
+
+        &:hover::after { transform: translateX(-1.75vr) translateY(-0.5vr); }
     }
 }

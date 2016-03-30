@@ -1,3 +1,5 @@
+.Header--Macys.is-scrolled h1 { color: #e01a2b; }
+
 .Project-hero--Macys::before {
     background: #fff url("../images/Macys-BG.jpg") no-repeat top center;
     background-size: contain;

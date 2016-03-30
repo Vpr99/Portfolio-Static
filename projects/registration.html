@@ -9,7 +9,7 @@
     <script src="<% assetPath %>/js/main.js" defer></script>
 </head>
 <body>
-    <header class="Header is-projectPage">
+    <header class="Header Header--Registration is-projectPage">
         <section class="Header-container">
             <a class="Header-logo" href="/"><h1 class="Header-name">Eric Skram</h1></a>
             <ul class="Nav">
@@ -73,4 +73,14 @@
         </div>
     </div>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="<% assetPath %>/js/main.js"></script>
+<script>
+$(document).ready(function(){
+    $(window).scroll(function () {
+        var scrollVal = $(window).scrollTop();
+        $('.Project-hero--Registration').css('opacity', 1 - (scrollVal/240));
+    });
+});
+</script>
 </html>

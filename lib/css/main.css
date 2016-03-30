@@ -32,6 +32,7 @@ The Inverted Triangle
 @import "components.header.css";
 @import "components.projectgrid.css";
 @import "components.project.css";
+@import "components.project.proreferral.css";
 @import "components.project.registration.css";
 @import "components.project.cfn.css";
 @import "components.project.macys.css";
