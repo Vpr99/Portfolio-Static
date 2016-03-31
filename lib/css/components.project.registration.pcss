@@ -6,7 +6,7 @@
 
     &::before {
         background: url("../images/Registration-Case-HeaderBG-Sharp.jpg") no-repeat top center;
-        background-size: contain;
+        background-size: cover;
     }
 }
 
@@ -15,18 +15,10 @@
 
     &::before {
         background: url("../images/Registration-Case-HeaderBG-Blur.jpg") no-repeat top center;
-        background-size: contain;
+        background-size: cover;
     }
 }
 
-.RegistrationDashboard {
-    &-description { lost-column: 2/3 0; }
-}
-
-.RegistrationSearch {
-    &-description { lost-column: 2/3 0; }
-}
-
-.RegistrationDetail {
-    &-description { lost-column: 2/3 0; }
-}
+.RegistrationDashboard,
+.RegistrationSearch,
+.RegistrationDetail { &-description { @media large { lost-column: 2/3 0; } } }

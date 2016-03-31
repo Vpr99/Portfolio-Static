@@ -1,12 +1,12 @@
 .ProjectGrid {
-
     @mixin ui-list;
     lost-center: $wide-container;
-    margin-top: 7rem;
+    margin-top: 7vr;
 }
 
 .GridItem {
-    margin-bottom: 1.5rem;
+    lost-column: 1/1;
+    margin-bottom: 1.5vr;
     overflow: hidden;
     position: relative;
 
@@ -18,12 +18,14 @@
 
     &-info {
         background: rgba(#000, 0.8);
-        opacity: 0;
         position: absolute auto auto 0 auto;
-        transform: translateY(100%);
         transition: all 0.3s ease-out-quint;
         width: 100%;
-        z-index: 2;
+        z-index: 4;
+        @mixin large {
+            opacity: 0;
+            transform: translateY(100%);
+        }
     }
 
     &:hover &-info {
@@ -36,7 +38,7 @@
         font-size: 0.875rem;
         font-weight: 500;
         letter-spacing: 1px;
-        margin: 0.5rem 0.5rem 0 0.5rem;
+        margin: 0.5vr 0.5rem 0 0.5vr;
         text-transform: uppercase;
     }
 
@@ -44,22 +46,28 @@
         color: rgba(#fff, 0.8);
         font-size: 0.875rem;
         font-weight: 300;
-        margin: 0 0.5rem 0.5rem 0.5rem;
+        margin: 0 0.5rem 0.5vr 0.5rem;
     }
+    @mixin medium {
+        lost-column: 1/2 3 1vr;
+        margin-bottom: 1vr;
 
-    &--proreferral { lost-column: 1/2; }
-    &--registration { lost-column: 1/2; }
-    &--cfnapa { lost-column: 1/3 0; }
-    &--macys { lost-column: 1/3 0; }
-    &--recipes { lost-column: 1/3 0; }
+        &--proreferral { lost-column: 1/1 0 1vr; }
+    }
+    @mixin large {
+        &--proreferral { lost-column: 1/2 2 1.5vr; }
+        &--macys { lost-column: 1/2 2 1.5vr; }
+        &--registration { lost-column: 1/3 0 1.5vr; }
+        &--cfnapa { lost-column: 1/3 0 1.5vr; }
+        &--recipes { lost-column: 1/3 0 1.5vr; }
+    }
 }
 
-/* Styles for the Pro Referral Case */
+/* Home Page Card */
 
 .ProReferral {
 
     &-bg {
-
         @mixin project-thumbnail-bg;
         background: url("../images/ProReferral-Thumb-BG.jpg");
         background-size: cover;
@@ -88,8 +96,7 @@
         size: 62.5% 50%;
 
         &--1 {
-
-            @mixin desktop { animation: In-PR-card-1 0.5s normal forwards ease-out; }
+            @mixin large { animation: In-PR-card-1 0.5s normal forwards ease-out; }
             background: url("../images/ProReferral-Thumb-Card-1.png");
             background-size: cover;
             transform: translateX(30.7%) translateY(16.6%);
@@ -97,7 +104,7 @@
         }
 
         &--2 {
-            @mixin desktop { animation: In-PR-card-2 0.5s normal forwards ease-out; }
+            @mixin large { animation: In-PR-card-2 0.5s normal forwards ease-out; }
             background: url("../images/ProReferral-Thumb-Card-2.png");
             background-size: cover;
             transform: translateX(47%) translateY(16.6%) scale(0.9);
@@ -105,7 +112,7 @@
         }
 
         &--3 {
-            @mixin desktop { animation: In-PR-card-3 0.5s normal forwards ease-out; }
+            @mixin large { animation: In-PR-card-3 0.5s normal forwards ease-out; }
             background: url("../images/ProReferral-Thumb-Card-3.png");
             background-size: cover;
             transform: translateX(61%) translateY(16.6%) scale(0.8);
@@ -113,7 +120,7 @@
         }
 
         &--4 {
-            @mixin desktop { animation: In-PR-card-4 0.5s normal forwards ease-out; }
+            @mixin large { animation: In-PR-card-4 0.5s normal forwards ease-out; }
             background: url("../images/ProReferral-Thumb-Card-4.png");
             background-size: cover;
             opacity: 0.8;
@@ -121,7 +128,7 @@
             z-index: 3;
         }
     }
-    @mixin desktop {
+    @mixin large {
         &:hover &-card--1 { animation: Out-PR-card-1 0.7s normal forwards ease-out-quad; }
         &:hover &-card--2 { animation: Out-PR-card-2 0.7s normal forwards ease-out-quad; }
         &:hover &-card--3 { animation: Out-PR-card-3 0.7s normal forwards ease-out-quad; }
@@ -134,7 +141,6 @@
 .Registration {
 
     &-bg {
-
         @mixin project-thumbnail-bg;
         backface-visibility: hidden;
         background: url("../images/Registration-BG.jpg");
@@ -145,7 +151,7 @@
     }
 
     &:hover &-bg {
-        filter: blur(1px) grayscale(0.2);
+        filter: blur(1px) brightness(0.9);
         transform: scale(1.1);
     }
 
@@ -153,14 +159,14 @@
         background: url("../images/Registration-Logo.svg") no-repeat center;
         background-size: contain;
         position: absolute 50% 50%;
-        size: 200px;
-        transform: translateX(-100px) translateY(-100px);
+        size: 32% 52%;
+        transform: translateX(-50%) translateY(-70%) scale(1.1);
         transition: all 0.3s ease-out-quint;
         z-index: 2;
-
+        @mixin large { transform: translateX(-50%) translateY(-50%) scale(0.8); }
     }
 
-    &:hover &-logo { transform: translateX(-100px) translateY(-140px) scale(0.8); }
+    &:hover &-logo { transform: translateX(-50%) translateY(-70%) scale(1.1); }
 }
 
 .CFN {
@@ -173,23 +179,15 @@
 
     &-logo {
         background: url("../images/CFN-Thumb-Logo.svg") no-repeat center;
-        opacity: 0.8;
         position: absolute 50% 50%;
         size: 60% 18%;
-        transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-80%);
         transition: all 0.3s ease-out-quint;
         z-index: 3;
-    }
-
-    &-scroller {
-        animation: CFN-Scroller 180s normal forwards ease-out;
-        animation-play-state: paused;
-        background: url("../images/CFN-Thumb-BG.jpg") repeat-x;
-        background-size: contain;
-        filter: blur(1px) grayscale(0.5) brightness(0.5);
-        position: absolute;
-        size: 1200px 100%;
-        z-index: 2;
+        @mixin large {
+            opacity: 0.8;
+            transform: translateX(-50%) translateY(-50%);
+        }
     }
 
     &:hover &-logo {
@@ -197,30 +195,52 @@
         transform: translateX(-50%) translateY(-80%);
     }
 
-    &:hover &-scroller { animation-play-state: running; }
+    &-scroller {
+        animation: CFN-Scroller 180s normal forwards ease-out;
+        animation-play-state: paused;
+        background: url("../images/CFN-Thumb-BG.jpg") repeat-x;
+        background-size: contain;
+        filter: grayscale(0.3) brightness(0.6);
+        position: absolute;
+        size: 1200px 100%;
+        transition: all 0.3s ease-out-quint;
+        z-index: 2;
+    }
+
+    &:hover &-scroller {
+        animation-play-state: running;
+        filter: blur(1px) grayscale(0.4) brightness(0.5);
+    }
 }
 
 .Macys {
+
     &-bg {
         @mixin project-thumbnail-bg;
         background: url("../images/Macys-Thumb-BG.jpg");
         background-size: cover;
         transition: all 0.3s ease-out-quint;
+        transform: scale(1.1);
         z-index: 1;
+        @mixin large { transform: scale(1); }
     }
+
+    &:hover &-bg { transform: scale(1.1); }
 
     &-tooltip {
         background: url("../images/Macys-Thumb-Tooltip.png") no-repeat center;
         background-size: contain;
-        opacity: 0;
         position: absolute 50% 50%;
         size: 65% 38%;
-        transform: translateX(-45%) translateY(-40%);
+        transform: translateX(-55%) translateY(-43%);
         transition: all 0.3s ease-out-quint;
         z-index: 3;
+        @mixin large {
+            opacity: 0;
+            transform: translateX(-45%) translateY(-40%);
+        }
     }
 
-    &:hover &-bg { transform: scale(1.1); }
     &:hover &-tooltip {
         opacity: 1;
         transform: translateX(-55%) translateY(-43%);
@@ -228,25 +248,24 @@
 }
 
 .Recipes {
+
     cursor: default; /* Project isn't live yet... */
 
     &-bg {
-
         @mixin project-thumbnail-bg;
         background: url("../images/Recipes-Thumb-BG.jpg");
         background-size: cover;
         transition: all 0.3s ease-out-quint;
     }
 
-
-
     &-logoBlock {
         background: #fff;
         position: absolute 50% 50%;
         size: 16% 25%;
-        transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-190%) translateY(-50%);
         transition: all 0.3s ease-out-quint;
         z-index: 3;
+        @mixin large { transform: translateX(-50%) translateY(-50%); }
     }
 
     &-logoMark {
@@ -259,17 +278,18 @@
         z-index: 4;
     }
 
-
-
     &-logoType {
         background: url("../images/Recipes-Thumb-LogoType.svg") no-repeat center;
         background-size: contain;
-        opacity: 0;
         position: absolute 50% 50%;
         size: 40% 20%;
-        transform: translateX(-40%) translateY(-50%);
+        transform: translateX(-25%) translateY(-50%);
         transition: all 0.3s ease-out-quint;
         z-index: 2;
+        @mixin large {
+            opacity: 0;
+            transform: translateX(-40%) translateY(-50%);
+        }
     }
 
     &-placeholder {
@@ -277,23 +297,28 @@
         display: block;
         font-size: 1.5rem;
         font-weight: 300;
-        opacity: 0;
+
         position: absolute 1rem auto;
         text-align: center;
-        transform: translateY(10%);
+        transform: translateY(0);
         transition: all 0.3s ease-out-quint;
         width: 100%;
         z-index: 2;
+        @mixin large {
+            opacity: 0;
+            transform: translateY(10%);
+        }
     }
-
-    @mixin desktop {
+    @mixin large {
         &:hover &-bg { filter: blur(1px) brightness(0.8); }
         &:hover &-logoBlock { transform: translateX(-190%) translateY(-50%); }
         &:hover &-logoMark { transform: translateX(-50%) translateY(-50%) rotate(-180deg); }
+
         &:hover &-logoType {
             opacity: 1;
             transform: translateX(-25%) translateY(-50%);
         }
+
         &:hover &-placeholder {
             opacity: 1;
             transform: translateY(0);

@@ -6,12 +6,18 @@
 }
 
 /* Media Query Generator */
-@define-mixin respond $min, $max {
-    @media (min-width: $min) and (max-width: $max) { @mixin-content; }
+@define-mixin small {
+    @media (max-width: $small) {
+        @mixin-content;
+    }
 }
-
-@define-mixin desktop {
-    @media (min-width: $desktop) {
+@define-mixin large {
+    @media (min-width: $large) {
+        @mixin-content;
+    }
+}
+@define-mixin medium {
+    @media (min-width: $medium) {
         @mixin-content;
     }
 }

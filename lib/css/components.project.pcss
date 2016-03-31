@@ -4,33 +4,42 @@
     /* Hero Section */
 
     &-hero {
+        display: none;
         overflow: hidden;
         position: relative;
-        size: 100% 31vr;
+        size: 100% 15vr;
         z-index: -2;
+        @mixin medium { display: block; }
+        @mixin large { size: 100% 31vr; }
 
         /* Fix for bg-attachment: repaint performance: http://goo.gl/PoEzgz */
 
         &::before {
             content: "";
             position: fixed 0 0;
-            size: 100%;
+            size: 100% 15vr;
             will-change: transform;
             z-index: -1;
+            @mixin large { size: 100% 31vr; }
         }
     }
 
     &-mainPreview {
-        lost-center: $narrow-container;
-        margin-top: -20vr;
+        lost-center: $narrow-container 1rem;
+        margin-top: 6vr;
+        @mixin medium { margin-top: -4vr; }
+        @mixin large { margin-top: -20vr; }
     }
+
+    &-mainPreviewContainer { lost-column: 1; }
 
     &-logoContainer { lost-center: $narrow-container; }
 
     &-logo {
         lost-column: 1/3;
         lost-move: 1/3;
-        margin-top: 4vr;
+        margin-top: 6vr;
+        @mixin large { margin-top: 4vr; }
     }
 
     &-block {
@@ -46,7 +55,7 @@
         }
 
         /* Contain blocks that aren't full-width */
-        &:not(&--fw) { lost-center: $wide-container; }
+        &:not(&--fw) { lost-center: $wide-container 1rem; }
     }
 
 
@@ -57,18 +66,27 @@
 }
 
 .Overview {
-    lost-center: $wide-container;
-    margin-top: 4vr;
+    lost-center: $wide-container 1rem;
+    margin-top: 1vr;
+    @mixin large { margin-top: 4vr; }
+    &--noPreview { margin-top: 5vr; }
 
     &-summary {
         color: #333;
         display: inline-block;
-        font: $ts2/3vr $serif;
-        lost-column: 3/5 2;
+        font: $ts1/2.5vr $serif;
+        lost-column: 1;
         margin: 0;
+        @mixin large {
+            font: $ts2/3vr $serif;
+            lost-column: 3/5 2;
+        }
     }
 
-    &-scope { lost-column: 2/5 2; }
+    &-scope {
+        lost-column: 1;
+        @mixin large { lost-column: 2/5 2; }
+    }
 
     &-title {
         border-bottom: 1px solid #e3e3e3;

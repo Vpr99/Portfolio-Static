@@ -5,6 +5,7 @@
     ],
     "rules": {
         "indentation": 4,
-        "number-leading-zero": "always"
+        "number-leading-zero": "always",
+        "at-rule-empty-line-before": "never"
     }
 }

@@ -11,30 +11,30 @@ The Inverted Triangle
 */
 
 /* Settings: Global project settings & configurations */
-@import "settings.global.css";
-@import "settings.colors.css";
-@import "settings.animations.css";
+@import "settings.global.pcss";
+@import "settings.colors.pcss";
+@import "settings.animations.pcss";
 
 /* Tools: Globally available tools, helpers & mixins */
-@import "tools.mixins.css";
+@import "tools.mixins.pcss";
 
 /* Generic: Ground Zero Styles - Low Specificity & far-reaching */
-@import "generic.reeeset.css";
+@import "generic.reeeset.pcss";
 
 /* Elements: Unclassed HTML Elements & Type Selectors */
-@import "elements.page.css";
-@import "elements.headings.css";
-@import "elements.links.css";
+@import "elements.page.pcss";
+@import "elements.headings.pcss";
+@import "elements.links.pcss";
 
 /* Ojbects: Unstyled Design Patterns */
 
 /* Components: Designed & styled pieces of UI */
-@import "components.header.css";
-@import "components.projectgrid.css";
-@import "components.project.css";
-@import "components.project.proreferral.css";
-@import "components.project.registration.css";
-@import "components.project.cfn.css";
-@import "components.project.macys.css";
+@import "components.header.pcss";
+@import "components.projectgrid.pcss";
+@import "components.project.pcss";
+@import "components.project.proreferral.pcss";
+@import "components.project.registration.pcss";
+@import "components.project.cfn.pcss";
+@import "components.project.macys.pcss";
 
 /* Trumps: Overrides, Helpers & Utilities - 1 DOM Element at a time */

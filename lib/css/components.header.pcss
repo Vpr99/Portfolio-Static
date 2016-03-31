@@ -1,21 +1,27 @@
 .Header {
     background: rgba(#fff, 0.9);
-    height: 5rem;
+    height: 3vr;
     position: fixed 0 0;
     transition: all 0.3s ease-out-quint;
     z-index: 999;
+    @mixin medium { height: 5vr; }
 
     &-container {
-        lost-center: $wide-container;
-        align-items: flex-end;
+        align-items: baseline;
         display: flex;
         flex-flow: row nowrap;
-        height: 5rem;
+        height: 3vr;
         justify-content: space-between;
+        lost-center: $wide-container 1rem;
+        margin-top: 0.5vr;
+        @mixin medium {
+            height: 5vr;
+            margin-top: 2vr;
+        }
     }
 
     &-logo h1 {
-        color: #fd746c;
+        color: #333;
         font-size: 1.5rem;
         font-weight: 700;
         letter-spacing: 2px;
@@ -24,34 +30,38 @@
     }
 
     &.is-projectPage {
-        background: none;
-        h1 { color: #fff; }
-        .Nav-link { color: #fff; }
+        background: #fff;
+        border-bottom: 1px solid #e3e3e3;
+        h1 { color: #333; }
+        .Nav-link { color: $color-link; }
+        @mixin large {
+            background: none;
+            border-bottom: none;
+            h1 { color: #fff; }
+            .Nav-link { color: #fff; }
+        }
     }
 
     &.is-scrolled {
         background: #fff;
         border-bottom: 1px solid #e3e3e3;
-        h1 { color: #fd746c; }
         .Nav-link { color: $color-link; }
     }
 }
 
 .Nav {
-
     @mixin ui-list;
     display: flex;
     justify-content: space-around;
     margin-bottom: 0;
 
     &-link {
-
-        text-transform: uppercase;
-        font-weight: 500;
-        font-size: 0.875rem;
-        letter-spacing: 1px;
         display: block;
+        font-size: 0.875rem;
+        font-weight: 500;
+        letter-spacing: 1px;
         padding: 10px;
+        text-transform: uppercase;
         transition: all 0.3s ease-out-quint;
 
         &:hover { transform: translate(0, -0.25rem); }
