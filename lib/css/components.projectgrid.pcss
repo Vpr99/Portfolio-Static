@@ -55,11 +55,11 @@
         &--proreferral { lost-column: 1/1 0 1vr; }
     }
     @mixin large {
-        &--proreferral { lost-column: 1/2 2 1.5vr; }
-        &--macys { lost-column: 1/2 2 1.5vr; }
-        &--registration { lost-column: 1/3 0 1.5vr; }
-        &--cfnapa { lost-column: 1/3 0 1.5vr; }
-        &--recipes { lost-column: 1/3 0 1.5vr; }
+        &--proreferral { lost-column: 1/2 2 1vr; }
+        &--macys { lost-column: 1/2 2 1vr; }
+        &--registration { lost-column: 1/3 0 1vr; }
+        &--cfnapa { lost-column: 1/3 0 1vr; }
+        &--recipes { lost-column: 1/3 0 1vr; }
     }
 }
 
@@ -71,16 +71,29 @@
         @mixin project-thumbnail-bg;
         background: url("../images/ProReferral-Thumb-BG.jpg");
         background-size: cover;
-        filter: brightness(0.7);
+        filter: brightness(0.8) blur(1px);
+        @mixin large { filter: brightness(0.9) blur(0); }
     }
+
+    &:hover &-bg { filter: brightness(0.8) blur(1px); }
 
     &-device {
         background: url("../images/ProReferral-Thumb-Device.png");
         background-size: cover;
         position: absolute 50% 50%;
         size: 35% 118%;
-        transform: translateX(-50%) translateY(-35%);
+        transform: translate3d(-50%, -37%, 0) scale(1);
+        transition: all 0.4s ease-out-back;
         z-index: 2;
+        @mixin large {
+            filter: brightness(0.9);
+            transform: translate3d(-80%, -43%, 0) scale(0.7) rotate(-7deg);
+        }
+    }
+
+    &:hover &-device {
+        filter: brightness(1);
+        transform: translate3d(-50%, -37%, 0) scale(1);
     }
 
     /* Clipping area for the iPhone Screen */
@@ -217,7 +230,7 @@
 
     &-bg {
         @mixin project-thumbnail-bg;
-        background: url("../images/Macys-Thumb-BG.jpg");
+        background: url("../images/Macys-Thumb-BG.png");
         background-size: cover;
         transition: all 0.3s ease-out-quint;
         transform: scale(1.1);
@@ -227,23 +240,42 @@
 
     &:hover &-bg { transform: scale(1.1); }
 
+    &-star {
+        background: url("../images/Macys-Thumb-Star.svg") no-repeat center;
+        background-size: contain;
+        position: absolute 42% 0 0 21%;
+        size: 4% 7%;
+        transform: translateX(-100%) translateY(-80%) scale(1);
+        transition: all 0.3s ease-out-back;
+        z-index: 2;
+        @mixin large {
+            opacity: 0;
+            transform: translateX(-50%) translateY(-50%) scale(0.4);
+        }
+    }
+
+    &:hover &-star {
+        opacity: 1;
+        transform: translateX(-100%) translateY(-80%) scale(1);
+    }
+
     &-tooltip {
         background: url("../images/Macys-Thumb-Tooltip.png") no-repeat center;
         background-size: contain;
         position: absolute 50% 50%;
         size: 65% 38%;
-        transform: translateX(-55%) translateY(-43%);
+        transform: translateX(-43%) translateY(-46%);
         transition: all 0.3s ease-out-quint;
         z-index: 3;
         @mixin large {
             opacity: 0;
-            transform: translateX(-45%) translateY(-40%);
+            transform: translateX(-38%) translateY(-46%);
         }
     }
 
     &:hover &-tooltip {
         opacity: 1;
-        transform: translateX(-55%) translateY(-43%);
+        transform: translateX(-43%) translateY(-46%);
     }
 }
 
