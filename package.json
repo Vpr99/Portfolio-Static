@@ -51,6 +51,8 @@
     "postcss-import": "^8.0.2",
     "postcss-size": "^1.0.0",
     "postcss-vertical-rhythm": "^1.1.5",
+    "posthtml": "^0.8.5",
+    "posthtml-exp": "^0.8.1",
     "precss": "^1.4.0",
     "replace": "^0.3.0",
     "rimraf": "^2.5.2",
