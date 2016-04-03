@@ -5,12 +5,13 @@ var glob = require("glob-all"),
     posthtml = require("posthtml");
 
 /* Destination */
-var dest = "../build/";
+var dest = "./build/";
 
 /* Source */
 var files = glob.sync([
     __dirname + "/../**/*.html",
     "!" + __dirname + "/../node_modules/**/*.html",
+    "!" + __dirname + "/../lib/components/**/*.html",
     "!" + __dirname + "/../build/**/*.html"
 ]);
 
@@ -21,13 +22,6 @@ files.forEach(function(file) {
     var ext = path.extname(file);
     var basename = path.basename(file, ext);
     var html = fs.readFileSync(file, 'utf-8');
-
-    /* Config for PostHTML Template Expressions */
-    const exp = require('posthtml-exp')({
-        locals: {
-
-        }
-    });
 
     /* Create Pretty Permalinks */
     if(basename == "index") {
@@ -41,11 +35,12 @@ files.forEach(function(file) {
         });
     }
 
-    /* Run PostHTML Transformations */
-    posthtml([ exp ])
+    /* Run PostHTML Mutations */
+    posthtml()
+    .use(require('posthtml-include')({ encoding: 'utf-8' }))
     .process(html)
     .then(function(result) {
-        if (!fs.existsSync(dest + basename) && !isIndex){
+        if (!fs.existsSync(dest + basename) && !isIndex) {
             fs.mkdirSync(dest + basename);
         }
         fs.writeFile(dest + permalink, result.html, 'utf-8');
