@@ -3,7 +3,6 @@ var glob = require("glob-all"),
     fs = require("fs-extra"),
     permalinks = require("permalinks"),
     posthtml = require("posthtml");
-
 /* Destination */
 var dest = "./build/";
 
@@ -35,8 +34,15 @@ files.forEach(function(file) {
         });
     }
 
-    /* Run PostHTML Mutations */
-    posthtml()
+    console.log("");
+    console.log("===============================================================================");
+    console.log("Building " + basename + "...");
+
+    /* Configure PostHTML and run Mutations */
+
+    var hint = require('posthtml-hint')();
+
+    posthtml([ hint ])
     .use(require('posthtml-include')({ encoding: 'utf-8' }))
     .process(html)
     .then(function(result) {

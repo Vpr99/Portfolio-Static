@@ -52,6 +52,7 @@
     "postcss-size": "^1.0.0",
     "postcss-vertical-rhythm": "^1.1.5",
     "posthtml": "^0.8.5",
+    "posthtml-hint": "^0.8.1",
     "posthtml-include": "^1.0.2",
     "precss": "^1.4.0",
     "replace": "^0.3.0",
