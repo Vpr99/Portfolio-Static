@@ -34,16 +34,14 @@ files.forEach(function(file) {
         });
     }
 
-    console.log("");
-    console.log("===============================================================================");
-    console.log("Building " + basename + "...");
+    /* Compile path for static assets */
+    html = html.replace(/{{static}}/g, '/public');
 
     /* Configure PostHTML and run Mutations */
+    const hint = require('posthtml-hint')();
+    const include = require('posthtml-include')({ encoding: 'utf-8' });
 
-    var hint = require('posthtml-hint')();
-
-    posthtml([ hint ])
-    .use(require('posthtml-include')({ encoding: 'utf-8' }))
+    posthtml([ hint, include ])
     .process(html)
     .then(function(result) {
         if (!fs.existsSync(dest + basename) && !isIndex) {
