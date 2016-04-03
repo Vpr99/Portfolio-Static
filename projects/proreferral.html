@@ -7,15 +7,7 @@
     <link rel="stylesheet" href="<% assetPath %>/css/main.css">
 </head>
 <body>
-    <header class="Header Header--ProReferral is-projectPage">
-        <section class="Header-container">
-            <a class="Header-logo" href="/"><h1 class="Header-name">Eric Skram</h1></a>
-            <ul class="Nav">
-                <li class="Nav-item"><a class="Nav-link" href="/">Work</a></li>
-                <!-- <li class="Nav-item"><a class="Nav-link" href="#">Blog</a></li> -->
-            </ul>
-        </section>
-    </header>
+    <include src="lib/components/header.html"></include>
     <div class="Content">
         <div class="Project-heading">
             <div class="Project-hero Project-hero--ProReferral"></div>
@@ -72,10 +64,10 @@
                     <p>When a Pro receives a new lead, they can quickly evaluate whether it's something they're interested pursuing. From there, they can either pass or follow up with the customer.</p>
                 </div>
                 <div class="PRProAppTriage-list">
-                    <div id="PRProAppTriage-Card" class="PRProAppTriage-mock">
+                    <div class="PRProAppTriage-mock">
                         <img src="<% assetPath %>/images/ProReferral-Case-Triage.png" alt="">
                     </div>
-                    <div id="PRProAppTriage-Card" class="PRProAppTriage-mock PRProAppTriage-mock--followUp">
+                    <div class="PRProAppTriage-mock PRProAppTriage-mock--followUp">
                         <img src="<% assetPath %>/images/ProReferral-Case-TriageFollowUp.png" alt="">
                     </div>
                     <div class="PRProAppTriage-mock PRProAppTriage-mock--pass">
@@ -106,12 +98,7 @@
             </section>
         </div>
     </div>
-    <footer class="Footer">
-        <div class="Footer-legal">&copy; Eric Skram</div>
-        <div class="Footer-links">
-            <a href="mailto:eric@skram.com">Email</a> <span class="Footer-divider">//</span> <a href="https://github.com/Vpr99" target="_blank">Github</a> <span class="Footer-divider">//</span> <a href="https://www.instagram.com/vpr99/" target="_blank">Instagram</a>
-        </div>
-    </footer>
+    <include src="lib/components/footer.html"></include>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 <script src="<% assetPath %>/js/main.js"></script>
