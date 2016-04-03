@@ -3,21 +3,26 @@ var glob = require("glob-all"),
     fs = require("fs-extra"),
     permalinks = require("permalinks"),
     posthtml = require("posthtml");
+
+/* Site Root */
+var root = __dirname.replace('/scripts', '');
+
 /* Destination */
 var dest = "./build/";
 
 /* Source */
 var files = glob.sync([
-    __dirname + "/../**/*.html",
-    "!" + __dirname + "/../node_modules/**/*.html",
-    "!" + __dirname + "/../lib/components/**/*.html",
-    "!" + __dirname + "/../build/**/*.html"
+    root + "/**/*.html",
+    "!" + root + "/node_modules/**/*.html",
+    "!" + root + "/lib/components/**/*.html",
+    "!" + root + "/build/**/*.html"
 ]);
 
 /* Loop through source files */
 files.forEach(function(file) {
     var permalink;
     var isIndex;
+    var dirname = path.dirname(file).substring(root.length);
     var ext = path.extname(file);
     var basename = path.basename(file, ext);
     var html = fs.readFileSync(file, 'utf-8');
