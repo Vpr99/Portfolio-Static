@@ -1,6 +1,9 @@
 /* Header Logo Color on Pro Referral Case */
 
-.Header--ProReferral.is-scrolled h1 { color: $pr-orange; }
+.Header--ProReferral.is-scrolled {
+    h1 { color: $pr-orange; }
+    .Nav-item { border-bottom: 4px solid $pr-orange; }
+}
 
 /* Case Study */
 
@@ -30,7 +33,7 @@
 .PRPro {
     display: block;
     @mixin large {
-        background: url("../images/proreferral/case/Pro-BG.jpg") no-repeat center;
+        background: url("../images/proreferral/case/Pro-BG.jpg") no-repeat top center;
         background-size: cover;
         size: 100% 50vr;
     }

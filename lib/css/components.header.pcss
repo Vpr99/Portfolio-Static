@@ -38,6 +38,7 @@
             background: none;
             border-bottom: none;
             h1 { color: #fff; }
+            .Nav-item { border-bottom: 4px solid #fff; }
             .Nav-link { color: #fff; }
         }
     }
@@ -45,7 +46,9 @@
     &.is-scrolled {
         background: #fff;
         border-bottom: 1px solid #e3e3e3;
-        .Nav-link { color: $color-link; }
+        h1 { color: #333; }
+        .Nav-item { border-bottom: 4px solid #000; }
+        .Nav-link { color: #000; }
     }
 }
 
@@ -55,15 +58,23 @@
     justify-content: space-around;
     margin-bottom: 0;
 
+    &-item {
+        padding: 0.25vr 0;
+        border-bottom: 4px solid #000;
+    }
+
     &-link {
         display: block;
         font-size: 0.875rem;
         font-weight: 500;
         letter-spacing: 1px;
-        padding: 10px;
         text-transform: uppercase;
         transition: all 0.3s ease-out-quint;
 
-        &:hover { transform: translate(0, -0.25rem); }
+        &:hover { transform: translate3d(0, -0.25rem, 0); }
+        &.is-active {
+            color: #000;
+            &:hover { transform: translate3d(0, 0, 0); }
+        }
     }
 }
