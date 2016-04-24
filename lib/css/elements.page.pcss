@@ -2,6 +2,13 @@ body {
     font: $ts0/1 $sans-serif;
     font-feature-settings: "kern", "liga";
     -webkit-backface-visibility:hidden;
+
+    &.modalOpen { overflow: hidden; }
 }
 
 figcaption { font: 300 $ts0/1 $sans-serif; }
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}

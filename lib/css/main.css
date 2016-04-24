@@ -32,6 +32,7 @@ The Inverted Triangle
 /* Components: Designed & styled pieces of UI */
 @import "components.header.pcss";
 @import "components.tagline.pcss";
+@import "components.modal.pcss";
 @import "components.projectgrid.pcss";
 @import "components.project.pcss";
 @import "components.project.proreferral.pcss";

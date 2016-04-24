@@ -67,13 +67,13 @@
                 </div>
                 <div class="PRProAppTriage-list">
                     <div class="PRProAppTriage-mock">
-                        <img src="{{static}}/images/proreferral/case/Triage.png" alt="">
+                        <img class="willExpand" src="{{static}}/images/proreferral/case/Triage.png" alt="">
                     </div>
                     <div class="PRProAppTriage-mock PRProAppTriage-mock--followUp">
-                        <img src="{{static}}/images/proreferral/case/Triage-FollowUp.png" alt="">
+                        <img class="willExpand" src="{{static}}/images/proreferral/case/Triage-FollowUp.png" alt="">
                     </div>
                     <div class="PRProAppTriage-mock PRProAppTriage-mock--pass">
-                        <img src="{{static}}/images/proreferral/case/Triage-Pass.png" alt="">
+                        <img class="willExpand" src="{{static}}/images/proreferral/case/Triage-Pass.png" alt="">
                     </div>
                 </div>
             </section>
@@ -83,7 +83,7 @@
                     <p>Pros can hold a conversation with the consumer, quickly reference job details and keep track of the job's status through the messaging screen. They can also schedule appointments and set reminders when an appointment is approaching.</p>
                 </div>
                 <div class="PRProAppMessaging-mock">
-                    <img src="{{static}}/images/proreferral/case/Messaging--Web.png" alt="">
+                    <img class="willExpand" src="{{static}}/images/proreferral/case/Messaging--Web.png" alt="">
                 </div>
             </section>
 
@@ -100,6 +100,7 @@
             </section>
         </div>
     </div>
+    <include src="lib/components/modal.html"></include>
     <include src="lib/components/footer.html"></include>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
@@ -133,7 +134,7 @@ $(document).ready(function(){
                 }
             }
         }
-    })
+    });
 });
 </script>
 </html>
